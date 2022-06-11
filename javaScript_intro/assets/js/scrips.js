@@ -25,15 +25,21 @@ btnAdd.addEventListener('click', function() {
 
     if(resultado.innerHTML > 0) {
         btnSub.disabled = false
+        btnSub.classList.remove('desabilita')
+        btnSub.classList.add('btn')
     }
 }, false)
 
 
 btnSub.addEventListener('click', function() {
     if(resultado.innerHTML == 0) {
+        btnSub.classList.remove('btn')
+        btnSub.classList.add('desabilita')
         btnSub.disabled = true
+        
     } else {
         btnSub.disabled = false
+        
     }
 
     if(resultado.innerHTML < 10) {

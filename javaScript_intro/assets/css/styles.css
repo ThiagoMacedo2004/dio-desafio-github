@@ -5,18 +5,28 @@ body {
     background-color: aliceblue;
 }
 
-.btn {
+.btn-box {
     display: flex;
     align-items: center;
     justify-content: space-around;
     width: 100px;
 }
 
-.btn button {
+.btn-box .btn {
     width: 35px;
     height: 35px;
     border: none;
     border-radius: 50%;
     background-color: lightsalmon;
     color: aliceblue;
+}
+
+.desabilita {
+    width: 35px;
+    height: 35px;
+    border: none;
+    border-radius: 50%;
+    background-color: lightslategray;
+    color: aliceblue;
+    transition: 0.5s;
 }
