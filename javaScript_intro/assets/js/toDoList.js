@@ -41,6 +41,7 @@ btn.addEventListener('click', () => {
     tarefas.appendChild(tarefa)
 
     inputText.value = ''
+    inputText.focus()
     btn.disabled = true
 
 })
