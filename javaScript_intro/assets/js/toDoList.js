@@ -22,6 +22,7 @@ btn.addEventListener('click', () => {
     check.className  = 'check'
     check.id        = inputText.value
     check.name      = inputText.value
+    
     check.addEventListener('click', () => {
         if(check.checked !== '') {
             label.classList.toggle('risco')
