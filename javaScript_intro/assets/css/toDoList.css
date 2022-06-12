@@ -11,11 +11,15 @@ body {
 .container {
     display: flex;
     flex-direction: column;
-    align-items: start;
-    justify-content: space-between;
+    align-items: center;
+    justify-content: space-evenly;
     min-height: 280px;
-    width: 25%;
-    margin: 0 auto;
+    width: 22%;
+    padding: 8px;
+    margin: 5% auto;
+    border: 1px solid #fbfbfb;
+    border-radius: 10px;
+    background-color: white;
 }
 
 .btn, input  {
@@ -24,11 +28,28 @@ body {
 
 .tarefas {
     display: flex;
+    justify-content: flex-start;
     flex-direction: column;
     width: 100%;
+    max-height: 500px;
+    flex-wrap: wrap;
+    align-items: stretch;
     
+}
+
+.add-tarefa {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .tarefa {
     margin-bottom: 5px;
+}
+.tarefa label {
+    margin-left: 5px;
+}
+
+.risco {
+    text-decoration: line-through
 }

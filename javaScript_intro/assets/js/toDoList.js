@@ -5,10 +5,10 @@ var tarefas    = document.querySelector('.tarefas')
 inputText.addEventListener('keyup', (e) => {
     if(inputText.value == "") {
         btn.disabled = true
-        console.log(inputText.value)
+        
     } else {
         btn.disabled = false
-        console.log(inputText.value)
+        
     }
 })
 
@@ -19,14 +19,21 @@ btn.addEventListener('click', () => {
 
     var check        = document.createElement('input')
     check.type       = 'checkbox'
-
-    var label        = document.createElement('label')
-    
-    label.innerHTML = inputText.value
-    label.htmlFor   = inputText.value
-
+    check.className  = 'check'
     check.id        = inputText.value
     check.name      = inputText.value
+    check.addEventListener('click', () => {
+        if(check.checked !== '') {
+            label.classList.toggle('risco')
+        } 
+    })
+
+    var label       = document.createElement('label')
+    label.innerHTML = inputText.value
+    label.htmlFor   = inputText.value
+    label.id        = inputText.value
+
+   
 
     tarefa.append(check)
     tarefa.append(label)
@@ -35,5 +42,11 @@ btn.addEventListener('click', () => {
 
     inputText.value = ''
     btn.disabled = true
+
 })
+
+
+
+
+
 
