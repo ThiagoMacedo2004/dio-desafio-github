@@ -1,0 +1,36 @@
+<h1>Cursos</h1>
+
+<div class="form-group row">
+    <label class="col-sm-2 col-form-label">Filtrar por:</label>
+
+    <div class="col-sm-10">
+        <input class="form-control" [(ngModel)]="filtro">
+    </div>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Image</th>
+            <th>Name</th>
+            <th>Price</th>
+            <th>Code</th>
+            <th>Release Date</th>
+            <th>Rating</th>
+            <th>Options</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let row of _filtrandoCursos">
+            <td><img [src]="row.imageUrl"></td>
+            <td>{{ row.name }}</td>
+            <td>{{ row.price }}</td>
+            <td>{{ row.code | replace:'-': ' - ' }}</td>
+            <td>{{ row.releaseDate | date: 'dd/M/yyyy'}}</td>
+            <td>
+                <app-estrelas [rating]="row.rating"></app-estrelas>
+            </td>
+            <td></td>
+        </tr>
+    </tbody>
+</table>
