@@ -1,0 +1,1 @@
+console.log('Testando arquivo vinculado ao index.html')
