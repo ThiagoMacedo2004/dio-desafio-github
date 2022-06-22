@@ -1,0 +1,41 @@
+<mat-drawer-container class="example-container" autosize>
+
+    <mat-drawer #dr class="example-sidenav" mode="side" [opened]="sideNav">
+      <mat-selection-list #shoes [multiple]="false">
+        <mat-list-option routerLink="/titulos" routerLinkActive="teste">
+          <a> 
+            <!-- <mat-icon>list</mat-icon> -->
+            <span class="material-symbols-outlined">
+              format_list_bulleted
+            </span>
+            <span>Títulos</span> 
+          </a>
+        </mat-list-option>
+
+        <mat-list-option routerLink="novoTitulo" routerLinkActive="teste">
+          <a > 
+            <!-- <mat-icon >payments</mat-icon> -->
+            <span class="material-symbols-outlined">
+              payments
+            </span>
+            <span>Novo Título</span>
+          </a>
+        </mat-list-option>
+        
+        <mat-list-option routerLink="/novoFornecedor" routerLinkActive="teste">
+          <a > 
+            <!-- <mat-icon>add</mat-icon> -->
+            <span class="material-symbols-outlined">
+              storefront
+            </span>
+            <span>Fornecedores</span>
+          </a>
+        </mat-list-option>
+      </mat-selection-list>
+    </mat-drawer>
+
+    <mat-drawer-content class="content">
+      <router-outlet></router-outlet>
+    </mat-drawer-content>
+
+  </mat-drawer-container>
